@@ -90,6 +90,17 @@ local plugins = {
   --   dependencies = "neovim/nvim-lspconfig",
   -- },
   -- End plugin for Rust
+
+  -- Begin plugin for Tex
+  {
+    "lervag/vimtex",
+    ft = "tex",
+    dependencies = "neovim/nvim-lspconfig",
+    init = function()
+      vim.g.vimtex_view_general_viewer = "zathura"
+    end,
+  },
+  -- End plugin for Tex
 }
 
 return plugins
