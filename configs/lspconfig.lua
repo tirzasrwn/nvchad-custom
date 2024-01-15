@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd" }
+local servers = { "html", "cssls", "tsserver", "clangd", "jdtls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -25,5 +25,14 @@ lspconfig.gopls.setup {
       staticcheck = true,
       gofumpt = true,
     },
+  },
+}
+
+lspconfig.lua_ls.setup {
+  Lua = {
+    workspace = { checkThirdParty = false },
+    telemetry = { enable = false },
+    -- NOTE: toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+    -- diagnostics = { disable = { 'missing-fields' } },
   },
 }
