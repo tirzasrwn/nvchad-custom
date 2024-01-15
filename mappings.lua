@@ -2,8 +2,15 @@
 local M = {}
 
 M.general = {
+  -- normal mode
   n = {
     -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<leader>le"] = {
+      function()
+        vim.diagnostic.open_float()
+      end,
+      "open diagnostic float this line",
+    },
 
     --  format with conform
     ["<leader>fm"] = {
@@ -13,6 +20,8 @@ M.general = {
       "formatting",
     },
   },
+
+  -- visual mode
   v = {
     [">"] = { ">gv", "indent" },
   },
