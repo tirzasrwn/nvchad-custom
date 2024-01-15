@@ -29,6 +29,31 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {},
+    },
+  },
+
+  {
+    "NvChad/nvterm",
+    opts = {
+      terminals = {
+        type_opts = {
+          float = {
+            relative = "editor",
+            row = 0.125,
+            col = 0.05,
+            width = 0.9,
+            height = 0.7,
+            border = "single",
+          },
+        },
+      },
+    },
+  },
+
   -- Install a plugin
   {
     "max397574/better-escape.nvim",
