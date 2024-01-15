@@ -12,6 +12,8 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
+    "go",
+    "java",
   },
   indent = {
     enable = true,
@@ -44,6 +46,9 @@ M.mason = {
     -- latex stuff
     "latexindent",
     "texlab",
+
+    -- java
+    "jdtls",
   },
 }
 
