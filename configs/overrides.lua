@@ -14,6 +14,7 @@ M.treesitter = {
     "markdown_inline",
     "go",
     "java",
+    "gitignore",
   },
   indent = {
     enable = true,
@@ -49,6 +50,9 @@ M.mason = {
 
     -- java
     "jdtls",
+
+    -- markdown
+    "marksman",
   },
 }
 
