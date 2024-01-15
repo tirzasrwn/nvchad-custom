@@ -37,6 +37,9 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+    -- go
+    "gopls",
+    "gofumpt",
 
     -- latex stuff
     "latexindent",
