@@ -35,5 +35,7 @@ vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 vim.keymap.set("n", "]]", "]]zz")
+vim.keymap.set("n", "G", "Gzz")
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
 
 return M
