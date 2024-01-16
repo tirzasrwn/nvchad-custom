@@ -30,10 +30,30 @@ local plugins = {
   },
 
   {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = overrides.blankline,
+  },
+
+  {
     "nvim-telescope/telescope.nvim",
-    opts = {
-      defaults = {},
-    },
+    dependencies = { "nvim-lua/plenary.nvim" },
+    -- opts = {
+    --   defaults = {},
+    -- },
+    config = function()
+      -- resetup telescope to its default
+      require("telescope").setup {
+        defaults = {
+          mappings = {
+            n = { ["q"] = require("telescope.actions").close },
+          },
+        },
+      }
+    end,
+    init = function()
+      require "custom.configs.telescope"
+    end,
   },
 
   {
