@@ -72,4 +72,28 @@ M.nvimtree = {
   },
 }
 
+M.blankline = {
+  indent = {
+    char = "│",
+    tab_char = "│",
+  },
+  scope = { enabled = false },
+  exclude = {
+    filetypes = {
+      "help",
+      "terminal",
+      "lazy",
+      "lspinfo",
+      "TelescopePrompt",
+      "TelescopeResults",
+      "mason",
+      "nvdash",
+      "nvcheatsheet",
+      "",
+    },
+  },
+  show_trailing_blankline_indent = true,
+  show_first_indent_level = true,
+}
+
 return M
