@@ -96,6 +96,39 @@ local plugins = {
     end,
   },
   -- End plugin for Tex
+
+  {
+    "echasnovski/mini.indentscope",
+    lazy = false,
+    version = "*",
+    config = function()
+      require("mini.indentscope").setup()
+    end,
+    opts = {
+      -- symbol = "▏",
+      symbol = "│",
+      options = { try_as_border = true },
+    },
+    init = function()
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = {
+          "help",
+          "terminal",
+          "lazy",
+          "lspinfo",
+          "TelescopePrompt",
+          "TelescopeResults",
+          "mason",
+          "nvdash",
+          "nvcheatsheet",
+          "",
+        },
+        callback = function()
+          vim.b.miniindentscope_disable = true
+        end,
+      })
+    end,
+  },
 }
 
 return plugins
