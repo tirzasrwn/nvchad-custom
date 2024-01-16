@@ -15,6 +15,7 @@ M.treesitter = {
     "go",
     "java",
     "gitignore",
+    "bash",
   },
   indent = {
     enable = true,
@@ -53,6 +54,10 @@ M.mason = {
 
     -- markdown
     "marksman",
+
+    -- bash
+    "shfmt",
+    "bash-language-server",
   },
 }
 
