@@ -58,6 +58,9 @@ M.mason = {
     -- bash
     "shfmt",
     "bash-language-server",
+
+    -- rust
+    "rust_analyzer",
   },
 }
 
