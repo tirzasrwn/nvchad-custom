@@ -8,6 +8,8 @@ local options = {
     css = { "prettier" },
     html = { "prettier" },
     json = { "prettier" },
+    markdown = { "prettier" },
+    yaml = { "prettier" },
 
     sh = { "shfmt" },
     go = { "gofumpt" },
