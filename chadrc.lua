@@ -6,7 +6,7 @@ local highlights = require "custom.highlights"
 
 M.ui = {
   theme = "catppuccin",
-  theme_toggle = { "catppuccin", "one_light" },
+  theme_toggle = { "catppuccin", "chadracula" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -17,6 +17,7 @@ M.ui = {
     -- round and block will work for the minimal theme only)
     separator_style = "block",
     overriden_modules = nil,
+    transparency = true,
   },
 }
 
