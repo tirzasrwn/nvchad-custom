@@ -92,6 +92,11 @@ local plugins = {
     end,
   },
 
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    lazy = false,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
